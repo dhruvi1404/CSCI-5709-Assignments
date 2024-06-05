@@ -1,0 +1,79 @@
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #1b2430;
+    padding: 20px 80px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+    position: fixed; /* Changed from 'relative' to 'fixed' */
+    z-index: 1051; /* Make sure navbar is above the slidebar */
+    height: 60px; /* Adjusted height to standardize */
+    width: 100%; /* Ensure it spans the full width */
+    top: 0; /* Position at the top */
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navbar li {
+    list-style: none;
+    padding: 0 20px;
+}
+
+#navbar li a {
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #fff;
+    transition: 0.3s ease-in-out;
+}
+
+#navbar li a:hover {
+    color: #17cf97;
+}
+
+#mobile {
+    display: none; /* Hidden by default */
+}
+
+#mobile i {
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 769px) {
+    #mobile {
+        display: block; /* Show mobile menu icon */
+    }
+
+    .menu {
+        position: fixed;
+        top: 60px; /* Start right under the navbar */
+        right: 0;
+        width: 300px;
+        height: calc(100vh - 60px); /* Full height minus navbar height */
+        background: #2a3239;
+        padding: 40px 20px;
+        transform: translateX(100%); /* Start hidden to the right */
+        transition: transform 0.3s ease-in-out;
+        z-index: 1050; /* Below navbar but above other content */
+    }
+
+    .menu.active {
+        transform: translateX(0); /* Slide in from the right */
+    }
+
+    #navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    #navbar li {
+        margin-bottom: 25px;
+    }
+}
