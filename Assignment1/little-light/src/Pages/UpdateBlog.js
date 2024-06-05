@@ -3,17 +3,18 @@ import Navbar from '../components/Navbar';
 import { useParams, useNavigate } from 'react-router-dom';
 import './UpdateBlog.css';  // Assuming CSS is placed in styles directory
 
+  // Static blogs data
+  const blogsData = {
+    '1': { title: "Tips for Helping Children Cope with Change", content: "Full content of blog 1 here...", imgSrc: '/images/image-1.jpg' },
+    '2': { title: "How to protect your mental health at work", content: "Full content of blog 2 here...", imgSrc: '/images/image-2.jpg' },
+    '3': { title: "When it’s time to hand in your notice to go in search of yourself", content: "Full content of blog 3 here...", imgSrc: '/images/image-3.jpg' }
+};
 function UpdateBlog() {
     const { id } = useParams();
     const navigate = useNavigate();
     const [blog, setBlog] = useState({ title: '', content: '', imgSrc: '' });
 
-    // Static blogs data
-    const blogsData = {
-        '1': { title: "Tips for Helping Children Cope with Change", content: "Full content of blog 1 here...", imgSrc: '/images/image-1.jpg' },
-        '2': { title: "How to protect your mental health at work", content: "Full content of blog 2 here...", imgSrc: '/images/image-2.jpg' },
-        '3': { title: "When it’s time to hand in your notice to go in search of yourself", content: "Full content of blog 3 here...", imgSrc: '/images/image-3.jpg' }
-    };
+  
 
     useEffect(() => {
         // Simulate fetching data for the given blog ID
