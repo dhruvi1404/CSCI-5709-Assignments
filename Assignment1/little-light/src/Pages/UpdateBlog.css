@@ -1,0 +1,50 @@
+/* UpdateBlog.css */
+.update-blog-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.update-blog-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.update-blog-container label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.update-blog-container input[type="text"],
+.update-blog-container textarea,
+.update-blog-container input[type="file"] {
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.update-blog-container button {
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.update-blog-container button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+}
+
+.update-blog-container button[type="button"] {
+    background-color: #6c757d;
+    color: white;
+}
+
+.update-blog-container button:hover {
+    opacity: 0.9;
+}
